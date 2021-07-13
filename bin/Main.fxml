@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane accessibleRole="IMAGE_VIEW" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="-7.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #000000;">
+         <children>
+            <Button layoutX="1096.0" layoutY="15.0" mnemonicParsing="false" onAction="#loadPage" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #ffffff;" text="SEARCH" AnchorPane.leftAnchor="1096.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.011450414439194034" endY="1.0" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+            <TextField fx:id="textField" layoutX="14.0" layoutY="14.0" onAction="#loadPage" prefHeight="34.0" prefWidth="1070.0" style="-fx-border-color: #00c431;" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <WebView fx:id="webView" layoutX="18.0" layoutY="85.0" prefHeight="707.0" prefWidth="1171.0" />
+            <Button layoutX="155.0" layoutY="51.0" mnemonicParsing="false" onAction="#refreshPage" style="-fx-background-color: #ffffff;" text="REFRESH" />
+            <Button layoutX="23.0" layoutY="51.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #ffffff;" text="BACK" />
+            <Button layoutX="75.0" layoutY="51.0" mnemonicParsing="false" onAction="#forward" style="-fx-background-color: #ffffff;" text="FORWARD" />
+            <MenuButton layoutX="997.0" layoutY="50.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="SETTINGS">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button mnemonicParsing="false" onAction="#zoomIn" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #ffffff;" text="ZOOM IN" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#zoomOut" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="ZOOM OUT" />
+                     </graphic>
+                  </MenuItem>
+                   <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#displayHistory" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ffffff;" text="HISTORY" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <Button layoutX="937.0" layoutY="50.0" mnemonicParsing="false" onAction="#home" style="-fx-background-color: #ffffff;" text="HOME" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
